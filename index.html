@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔐 密码学轻松学 - Cryptography for Beginners</title>
+    <title>🔐 密码学课程 - 信息安全技术应用专业专用</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -16,18 +16,20 @@
         <div class="logo">
             <span class="logo-icon">🔐</span>
             <div class="logo-text">
-                <h1>密码学轻松学</h1>
-                <p>Cryptography for Beginners</p>
+                <h1>密码学课程</h1>
+                <p>信息安全技术应用专业专用</p>
             </div>
         </div>
-        <nav class="nav">
-            <a href="#home" class="nav-link active" data-chapter="0">🏠 首页</a>
-            <a href="#intro" class="nav-link" data-chapter="1">📖 第1章 简介</a>
-            <a href="#caesar" class="nav-link" data-chapter="2">🔑 第2章 凯撒密码</a>
-            <a href="#substitution" class="nav-link" data-chapter="3">🔐 第3章 替换密码</a>
-            <a href="#vigenere" class="nav-link" data-chapter="4">🎡 第4章 维吉尼亚</a>
-            <a href="#symmetric" class="nav-link" data-chapter="5">⚡ 第5章 对称加密</a>
-            <a href="#rsa" class="nav-link" data-chapter="6">🗝️ 第6章 RSA</a>
+        <nav class="nav" id="mainNav">
+            <a href="#home" class="nav-link active" data-project="0">🏠 首页</a>
+            <a href="#p1" class="nav-link" data-project="1">📜 项目1 古典密码</a>
+            <a href="#p2" class="nav-link" data-project="2">🌊 项目2 序列密码</a>
+            <a href="#p3" class="nav-link" data-project="3">📦 项目3 分组密码</a>
+            <a href="#p4" class="nav-link" data-project="4">🗝️ 项目4 公钥密码</a>
+            <a href="#p5" class="nav-link" data-project="5">🔨 项目5 哈希函数</a>
+            <a href="#p6" class="nav-link" data-project="6">🛡️ 项目6 消息认证码</a>
+            <a href="#p7" class="nav-link" data-project="7">✍️ 项目7 数字签名</a>
+            <a href="#p8" class="nav-link" data-project="8">🏗️ 项目8 应用场景</a>
         </nav>
         <button class="menu-btn" id="menuBtn">☰</button>
     </header>
@@ -42,32 +44,30 @@
         <!-- 首页英雄区 -->
         <section id="home" class="chapter hero-section active">
             <div class="hero-content">
-                <div class="hero-badge">✨ 专为大专学生设计</div>
+                <div class="hero-badge">✨ 信息安全技术应用专业专用</div>
                 <h2 class="hero-title">
-                    <span class="gradient-text">用动画</span>
-                    <span>看懂密码学</span>
+                    <span class="gradient-text">密码学课程</span>
+                    <span>用动画看懂每个项目</span>
                 </h2>
                 <p class="hero-desc">
-                    从古典密码到现代加密，用生动的动画和互动实验，
-                    <br>让抽象的密码学概念变得简单有趣！
+                    从古典密码到现代密码应用，8个项目、20+互动动画、50+练习题，
+                    <br>让抽象的密码学概念变得简单易学。每个项目都有动画演示、动手实验和习题巩固！
                 </p>
                 <div class="hero-stats">
                     <div class="stat-card">
-                        <div class="stat-number">6</div>
-                        <div class="stat-label">精彩章节</div>
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">教学项目</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">15+</div>
+                        <div class="stat-number">20+</div>
                         <div class="stat-label">互动动画</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">学习乐趣</div>
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">练习习题</div>
                     </div>
                 </div>
-                <a href="#intro" class="btn-primary">
-                    开始学习之旅 →
-                </a>
+                <a href="#p1" class="btn-primary">开始学习项目1 →</a>
             </div>
             <div class="hero-visual">
                 <div class="crypto-visual">
@@ -90,522 +90,23 @@
             </div>
         </section>
 
-        <!-- 第1章 密码学简介 -->
-        <section id="intro" class="chapter">
-            <div class="chapter-header">
-                <div class="chapter-num">第 1 章</div>
-                <h2>📖 密码学简介</h2>
-                <p class="chapter-subtitle">什么是密码学？为什么它这么重要？</p>
-            </div>
-            
-            <div class="content-grid">
-                <div class="info-card">
-                    <h3>🎯 学习目标</h3>
-                    <ul class="learn-list">
-                        <li>了解密码学的定义和起源</li>
-                        <li>区分明文和密文</li>
-                        <li>认识加密和解密的过程</li>
-                        <li>知道密码学的三大应用领域</li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>💡 核心概念</h3>
-                    <div class="concept-box">
-                        <div class="concept-item">
-                            <span class="tag tag-blue">明文</span>
-                            <span>原始的、能看懂的消息</span>
-                        </div>
-                        <div class="concept-item">
-                            <span class="tag tag-red">密文</span>
-                            <span>加密后、看不懂的消息</span>
-                        </div>
-                        <div class="concept-item">
-                            <span class="tag tag-green">加密</span>
-                            <span>明文 → 密文 的过程</span>
-                        </div>
-                        <div class="concept-item">
-                            <span class="tag tag-yellow">解密</span>
-                            <span>密文 → 明文 的过程</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 加解密动画演示 -->
-            <div class="demo-card">
-                <h3>🎬 加解密过程动画</h3>
-                <p class="demo-desc">点击播放按钮，看看一条消息是如何被加密和还原的！</p>
-                
-                <div class="encryption-demo">
-                    <div class="msg-box plain" id="plainMsg">
-                        <div class="msg-label">明文</div>
-                        <div class="msg-content">HELLO</div>
-                    </div>
-                    
-                    <div class="arrow-box">
-                        <div class="arrow">➡️</div>
-                        <div class="arrow-label">加密</div>
-                    </div>
-                    
-                    <div class="key-box">
-                        <div class="key-icon">🔑</div>
-                        <div class="key-label">密钥</div>
-                    </div>
-                    
-                    <div class="arrow-box reverse">
-                        <div class="arrow">➡️</div>
-                        <div class="arrow-label">解密</div>
-                    </div>
-                    
-                    <div class="msg-box cipher" id="cipherMsg">
-                        <div class="msg-label">密文</div>
-                        <div class="msg-content">KHOOR</div>
-                    </div>
-                </div>
-
-                <div class="demo-controls">
-                    <button class="btn-demo" onclick="playIntroAnimation()">▶️ 播放动画</button>
-                    <button class="btn-demo secondary" onclick="resetIntroAnimation()">🔄 重置</button>
-                </div>
-            </div>
-
-            <div class="info-card">
-                <h3>🌍 密码学在哪里？</h3>
-                <div class="app-grid">
-                    <div class="app-item">
-                        <div class="app-icon">🛒</div>
-                        <div class="app-name">网上购物</div>
-                        <div class="app-desc">保护你的银行卡号不被盗</div>
-                    </div>
-                    <div class="app-item">
-                        <div class="app-icon">💬</div>
-                        <div class="app-name">微信聊天</div>
-                        <div class="app-desc">让悄悄话真的只有你和TA知道</div>
-                    </div>
-                    <div class="app-item">
-                        <div class="app-icon">🏦</div>
-                        <div class="app-name">银行转账</div>
-                        <div class="app-desc">确保每一分钱都安全到达</div>
-                    </div>
-                    <div class="app-item">
-                        <div class="app-icon">📱</div>
-                        <div class="app-name">手机解锁</div>
-                        <div class="app-desc">指纹、密码都是加密技术</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 第2章 凯撒密码 -->
-        <section id="caesar" class="chapter">
-            <div class="chapter-header">
-                <div class="chapter-num">第 2 章</div>
-                <h2>🔑 凯撒密码 - 最简单的加密</h2>
-                <p class="chapter-subtitle">传说中凯撒大帝用它来传递军事机密！</p>
-            </div>
-
-            <div class="info-card">
-                <h3>📝 原理：字母偏移</h3>
-                <p>想象一下，把字母表"平移"几格，就这么简单！</p>
-                <p>例如：偏移 3 个位置</p>
-                <div class="example-box">
-                    <div class="example-line">
-                        <span class="label">明文：</span>
-                        <span>H</span><span>E</span><span>L</span><span>L</span><span>O</span>
-                    </div>
-                    <div class="example-arrow">↓ 每个字母往后移3格</div>
-                    <div class="example-line highlighted">
-                        <span class="label">密文：</span>
-                        <span>K</span><span>H</span><span>O</span><span>O</span><span>R</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 字母表动画 -->
-            <div class="demo-card">
-                <h3>🎡 字母表偏移动画</h3>
-                <p class="demo-desc">拖动滑块，亲眼看看字母表是如何"滑动"的！</p>
-                
-                <div class="alphabet-demo">
-                    <div class="alpha-row original">
-                        <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span>
-                    </div>
-                    <div class="alpha-shift" id="alphaShift">
-                        <div class="alpha-row shifted" id="shiftedRow">
-                            <span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span>
-                        </div>
-                    </div>
-                    <div class="alpha-row original">
-                        <span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span>
-                    </div>
-                </div>
-
-                <div class="shift-control">
-                    <label>偏移量：<span id="shiftValue">3</span></label>
-                    <input type="range" min="0" max="25" value="3" id="shiftSlider" oninput="updateCaesarAnimation()">
-                    <div class="shift-buttons">
-                        <button class="btn-small" onclick="setShift(1)">1</button>
-                        <button class="btn-small" onclick="setShift(3)">3</button>
-                        <button class="btn-small" onclick="setShift(5)">5</button>
-                        <button class="btn-small" onclick="setShift(13)">13</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 交互式编码器 -->
-            <div class="demo-card">
-                <h3>🛠️ 动手试试！凯撒密码编码器</h3>
-                <div class="encoder">
-                    <div class="encoder-group">
-                        <label>输入明文：</label>
-                        <input type="text" id="caesarInput" placeholder="输入要加密的文字..." value="HELLO WORLD" oninput="encodeCaesar()">
-                    </div>
-                    <div class="encoder-group">
-                        <label>偏移量：</label>
-                        <input type="number" id="caesarShift" value="3" min="0" max="25" oninput="encodeCaesar()">
-                    </div>
-                    <div class="encoder-group">
-                        <label>加密结果：</label>
-                        <div class="output-box" id="caesarOutput">KHOOR ZRUOG</div>
-                    </div>
-                    <div class="encoder-visual" id="caesarVisual"></div>
-                </div>
-            </div>
-
-            <div class="info-card warning">
-                <h3>⚠️ 安全吗？</h3>
-                <p>凯撒密码非常<strong>不安全</strong>！因为只有 26 种可能，暴力破解只需要几秒钟。但它是学习密码学的好起点！</p>
-                <div class="brute-force-demo">
-                    <p>破解试试：</p>
-                    <div class="brute-force-btn" onclick="runBruteForce('KHOOR')">🔓 暴力破解 "KHOOR"</div>
-                    <div class="brute-force-result" id="bruteResult"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 第3章 替换密码 -->
-        <section id="substitution" class="chapter">
-            <div class="chapter-header">
-                <div class="chapter-num">第 3 章</div>
-                <h2>🔐 替换密码 - 更聪明的加密</h2>
-                <p class="chapter-subtitle">不再是简单的偏移，每个字母都可以"变身"成另一个！</p>
-            </div>
-
-            <div class="info-card">
-                <h3>📝 原理：字母映射表</h3>
-                <p>创建一个"字母对照表"，把每个字母换成另一个完全不同的字母：</p>
-                <div class="mapping-box" id="mappingBox"></div>
-            </div>
-
-            <div class="demo-card">
-                <h3>🎲 生成你的密码表</h3>
-                <div class="generator-demo">
-                    <button class="btn-primary" onclick="generateMapping()">🎰 随机生成新密码表</button>
-                    <div class="mapping-display" id="mappingDisplay"></div>
-                </div>
-            </div>
-
-            <div class="demo-card">
-                <h3>🛠️ 替换密码实验</h3>
-                <div class="encoder">
-                    <div class="encoder-group">
-                        <label>输入明文：</label>
-                        <input type="text" id="subInput" placeholder="输入文字..." value="HELLO" oninput="encodeSubstitution()">
-                    </div>
-                    <div class="encoder-group">
-                        <label>加密结果：</label>
-                        <div class="output-box" id="subOutput">VMXXJ</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 第4章 维吉尼亚密码 -->
-        <section id="vigenere" class="chapter">
-            <div class="chapter-header">
-                <div class="chapter-num">第 4 章</div>
-                <h2>🎡 维吉尼亚密码 - 多表替换</h2>
-                <p class="chapter-subtitle">16世纪就发明了，但比凯撒密码强1000倍！</p>
-            </div>
-
-            <div class="info-card">
-                <h3>📝 核心思想</h3>
-                <p>不是固定用一个偏移量，而是用一个<strong>关键词</strong>来循环控制偏移！</p>
-                <div class="example-box">
-                    <div class="example-line">
-                        <span class="label">明文：</span>
-                        <span>A</span><span>T</span><span>T</span><span>A</span><span>C</span><span>K</span>
-                    </div>
-                    <div class="example-line key">
-                        <span class="label">密钥：</span>
-                        <span>L</span><span>E</span><span>M</span><span>O</span><span>N</span><span>L</span>
-                    </div>
-                    <div class="example-line">
-                        <span class="label">偏移：</span>
-                        <span>11</span><span>4</span><span>12</span><span>14</span><span>13</span><span>11</span>
-                    </div>
-                    <div class="example-line highlighted">
-                        <span class="label">密文：</span>
-                        <span>L</span><span>X</span><span>F</span><span>O</span><span>P</span><span>V</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 维吉尼亚轮盘动画 -->
-            <div class="demo-card">
-                <h3>🎯 轮盘演示</h3>
-                <p class="demo-desc">点击播放，看密钥如何控制字母变换！</p>
-                
-                <div class="vigenere-demo">
-                    <canvas id="vigenereWheel" width="400" height="400"></canvas>
-                    <div class="vigenere-info">
-                        <div class="vigenere-plain">明文: <span id="vigenerePlain">HELLO</span></div>
-                        <div class="vigenere-key">密钥: <span id="vigenereKey">KEY</span></div>
-                        <div class="vigenere-cipher">密文: <span id="vigenereCipher">RIJVS</span></div>
-                    </div>
-                </div>
-
-                <div class="demo-controls">
-                    <button class="btn-demo" onclick="playVigenereAnimation()">▶️ 演示动画</button>
-                    <button class="btn-demo secondary" onclick="resetVigenere()">🔄 重置</button>
-                </div>
-            </div>
-
-            <div class="demo-card">
-                <h3>🛠️ 维吉尼亚编码器</h3>
-                <div class="encoder">
-                    <div class="encoder-group">
-                        <label>输入明文：</label>
-                        <input type="text" id="vigenereInput" value="ATTACKATDAWN" oninput="encodeVigenere()">
-                    </div>
-                    <div class="encoder-group">
-                        <label>密钥：</label>
-                        <input type="text" id="vigenereKeyInput" value="LEMON" oninput="encodeVigenere()">
-                    </div>
-                    <div class="encoder-group">
-                        <label>加密结果：</label>
-                        <div class="output-box" id="vigenereOutput">LXFOPVEFRNHR</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 第5章 对称加密 -->
-        <section id="symmetric" class="chapter">
-            <div class="chapter-header">
-                <div class="chapter-num">第 5 章</div>
-                <h2>⚡ 对称加密 - 现代密码学</h2>
-                <p class="chapter-subtitle">加密解密用同一把钥匙，速度快到飞起！</p>
-            </div>
-
-            <div class="content-grid">
-                <div class="info-card">
-                    <h3>🔄 XOR 异或运算</h3>
-                    <p>现代加密的基石！规则很简单：</p>
-                    <div class="xor-table">
-                        <div class="xor-row"><span>0</span> XOR <span>0</span> = <span class="result">0</span></div>
-                        <div class="xor-row"><span>0</span> XOR <span>1</span> = <span class="result">1</span></div>
-                        <div class="xor-row"><span>1</span> XOR <span>0</span> = <span class="result">1</span></div>
-                        <div class="xor-row"><span>1</span> XOR <span>1</span> = <span class="result">0</span></div>
-                    </div>
-                    <p class="tip">💡 神奇之处：加密用一次密钥，解密再用一次同一个密钥！</p>
-                </div>
-                <div class="info-card">
-                    <h3>🎨 简单比喻</h3>
-                    <p>就像用<strong>同一张底片</strong>：</p>
-                    <p>拍摄 → 得到负片（加密）</p>
-                    <p>再拍摄 → 还原照片（解密）</p>
-                </div>
-            </div>
-
-            <!-- XOR 动画 -->
-            <div class="demo-card">
-                <h3>🎬 XOR 加密动画</h3>
-                <div class="xor-demo">
-                    <div class="xor-visual">
-                        <div class="xor-group">
-                            <div class="xor-label">明文二进制</div>
-                            <div class="xor-bits plain" id="xorPlain">01001000 01000101</div>
-                        </div>
-                        <div class="xor-op">XOR</div>
-                        <div class="xor-group">
-                            <div class="xor-label">密钥</div>
-                            <div class="xor-bits key" id="xorKey">10101010 11001100</div>
-                        </div>
-                        <div class="xor-eq">=</div>
-                        <div class="xor-group">
-                            <div class="xor-label">密文二进制</div>
-                            <div class="xor-bits cipher" id="xorCipher">11100010 10001001</div>
-                        </div>
-                    </div>
-                    
-                    <div class="xor-controls">
-                        <label>明文消息：</label>
-                        <input type="text" id="xorInput" value="HI" maxlength="8" oninput="updateXor()">
-                        <button class="btn-demo" onclick="playXorAnimation()">▶️ 播放位运算动画</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-card">
-                <h3>⚡ 主流对称加密算法</h3>
-                <div class="algo-grid">
-                    <div class="algo-card">
-                        <div class="algo-name">AES</div>
-                        <div class="algo-desc">高级加密标准<br>现在最流行！</div>
-                        <div class="algo-badge">💻 你的手机电脑都在用</div>
-                    </div>
-                    <div class="algo-card">
-                        <div class="algo-name">DES</div>
-                        <div class="algo-desc">数据加密标准<br>老牌经典</div>
-                        <div class="algo-badge">⚠️ 现在已不够安全</div>
-                    </div>
-                    <div class="algo-card">
-                        <div class="algo-name">3DES</div>
-                        <div class="algo-desc">三重数据加密<br>DES的加强版</div>
-                        <div class="algo-badge">🔄 加密3次</div>
-                    </div>
-                    <div class="algo-card">
-                        <div class="algo-name">ChaCha20</div>
-                        <div class="algo-desc">新一代算法<br>特别适合手机</div>
-                        <div class="algo-badge">📱 快且安全</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 第6章 RSA 公钥密码 -->
-        <section id="rsa" class="chapter">
-            <div class="chapter-header">
-                <div class="chapter-num">第 6 章</div>
-                <h2>🗝️ RSA - 公钥密码革命</h2>
-                <p class="chapter-subtitle">让互联网安全成为可能的伟大发明！</p>
-            </div>
-
-            <div class="info-card">
-                <h3>💡 为什么需要它？</h3>
-                <p>对称加密需要双方先共享密钥，但<strong>怎么安全地告诉对方密钥呢？</strong></p>
-                <p>这就像你和朋友想写信保密，但你们连见面交换暗号都做不到...</p>
-                <div class="analogy-box">
-                    <h4>📬 锁盒比喻</h4>
-                    <ol>
-                        <li>你给朋友送一个<strong>敞口的锁盒</strong>（公钥）</li>
-                        <li>朋友把信放进去，<strong>用盒子上的锁锁住</strong></li>
-                        <li>朋友把锁好的盒子寄回给你</li>
-                        <li>只有你有<strong>钥匙</strong>（私钥），能打开！</li>
-                    </ol>
-                </div>
-            </div>
-
-            <!-- 锁盒动画 -->
-            <div class="demo-card">
-                <h3>🎬 RSA 加解密动画</h3>
-                <div class="rsa-demo">
-                    <div class="rsa-stage">
-                        <div class="person person-a">
-                            <div class="avatar">🧑</div>
-                            <div class="name">发送方</div>
-                            <div class="key-tag">🔓 公钥（公开）</div>
-                        </div>
-                        <div class="flow-animation" id="rsaFlow">
-                            <div class="box" id="rsaBox">📦</div>
-                            <div class="lock" id="rsaLock" style="display:none;">🔒</div>
-                        </div>
-                        <div class="person person-b">
-                            <div class="avatar">👩</div>
-                            <div class="name">接收方</div>
-                            <div class="key-tag">🔑 私钥（保密）</div>
-                        </div>
-                    </div>
-                    <div class="rsa-steps" id="rsaSteps">
-                        <div class="step active" data-step="1">1️⃣ 发送公钥给接收方</div>
-                        <div class="step" data-step="2">2️⃣ 接收方用公钥加密消息</div>
-                        <div class="step" data-step="3">3️⃣ 接收方发送加密消息</div>
-                        <div class="step" data-step="4">4️⃣ 发送方用私钥解密消息</div>
-                    </div>
-                </div>
-
-                <div class="demo-controls">
-                    <button class="btn-demo" onclick="playRsaAnimation()">▶️ 开始演示</button>
-                    <button class="btn-demo secondary" onclick="resetRsa()">🔄 重置</button>
-                </div>
-            </div>
-
-            <div class="info-card">
-                <h3>🔢 RSA 数学原理（简单版）</h3>
-                <p>核心利用了"<strong>两个大质数相乘容易，分解回去极难</strong>"这个数学特性！</p>
-                <div class="rsa-math">
-                    <div class="math-example">
-                        <p>选两个质数：<strong>p = 61, q = 53</strong></p>
-                        <p>乘积：<strong>n = 61 × 53 = 3233</strong></p>
-                        <p>这给你，<strong>很难反推 p 和 q</strong>！</p>
-                        <div class="math-quiz">
-                            <p>试试看：<strong>n = ???</strong></p>
-                            <p>你能快速找到它是哪两个质数相乘吗？</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="demo-card">
-                <h3>🛠️ 小数字 RSA 实验</h3>
-                <p class="demo-desc">我们用小质数模拟一次完整的 RSA 流程！</p>
-                <div class="rsa-encoder">
-                    <div class="rsa-step-box" id="rsaSetup">
-                        <h4>🔧 生成密钥对</h4>
-                        <div class="rsa-input-group">
-                            <label>质数 p：</label>
-                            <input type="number" id="rsaP" value="61" oninput="rsaGenerate()">
-                        </div>
-                        <div class="rsa-input-group">
-                            <label>质数 q：</label>
-                            <input type="number" id="rsaQ" value="53" oninput="rsaGenerate()">
-                        </div>
-                        <button class="btn-primary" onclick="rsaGenerate()">🎰 随机生成</button>
-                    </div>
-                    <div class="rsa-keys">
-                        <div class="key-display public">
-                            <h5>🔓 公钥 (e, n)</h5>
-                            <p>(<span id="rsaE">17</span>, <span id="rsaN">3233</span>)</p>
-                        </div>
-                        <div class="key-display private">
-                            <h5>🔑 私钥 (d, n)</h5>
-                            <p>(<span id="rsaD">2753</span>, <span id="rsaN2">3233</span>)</p>
-                        </div>
-                    </div>
-                    <div class="rsa-encrypt">
-                        <div class="rsa-input-group">
-                            <label>输入数字消息（1-3232）：</label>
-                            <input type="number" id="rsaMsg" value="65" oninput="rsaEncrypt()">
-                        </div>
-                        <button class="btn-demo" onclick="rsaEncrypt()">🔐 加密</button>
-                        <div class="rsa-result">
-                            <p>加密结果：<span id="rsaCipher">...</span></p>
-                            <button class="btn-demo secondary" onclick="rsaDecrypt()">🔓 解密</button>
-                            <p>解密还原：<span id="rsaDecrypted">...</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-card final">
-                <h3>🎉 恭喜你完成了密码学入门！</h3>
-                <p>你已经学习了：</p>
-                <ul class="learn-list">
-                    <li>✅ 古典密码（凯撒、替换、维吉尼亚）</li>
-                    <li>✅ 对称加密（XOR、AES）</li>
-                    <li>✅ 公钥密码（RSA）</li>
-                </ul>
-                <p>密码学还有很多精彩内容等着你探索！</p>
-            </div>
-        </section>
+        <!-- 8个项目容器，内容由 JavaScript 动态渲染 -->
+        <section id="p1" class="chapter"></section>
+        <section id="p2" class="chapter"></section>
+        <section id="p3" class="chapter"></section>
+        <section id="p4" class="chapter"></section>
+        <section id="p5" class="chapter"></section>
+        <section id="p6" class="chapter"></section>
+        <section id="p7" class="chapter"></section>
+        <section id="p8" class="chapter"></section>
     </main>
 
     <!-- 底部 -->
     <footer class="footer">
-        <p>🔐 密码学轻松学 - 用动画让学习更简单 | 适合大专学生的入门课程</p>
+        <p>🔐 密码学课程 - 用动画让学习更简单 | 信息安全技术应用专业专用 | 版权归陈思昊所有</p>
     </footer>
 
+    <script src="content.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
