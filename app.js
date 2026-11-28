@@ -49,19 +49,24 @@ const chapters = document.querySelectorAll('.chapter');
 const progressFill = document.getElementById('progressFill');
 const progressText = document.getElementById('progressText');
 
+/* 统一导航函数：切换章节并更新进度 */
+function navigateTo(idx) {
+    navLinks.forEach(l => l.classList.remove('active'));
+    const target = document.querySelector(`.nav-link[data-project="${idx}"]`);
+    if (target) target.classList.add('active');
+    chapters.forEach(ch => ch.classList.remove('active'));
+    document.getElementById(idx === 0 ? 'home' : 'p' + idx).classList.add('active');
+    const prog = Math.round((idx / 8) * 100);
+    progressFill.style.width = prog + '%';
+    progressText.textContent = prog + '%';
+    document.querySelector('.nav').classList.remove('show');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 navLinks.forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
-        const idx = parseInt(link.dataset.project);
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-        chapters.forEach(ch => ch.classList.remove('active'));
-        document.getElementById(idx === 0 ? 'home' : 'p' + idx).classList.add('active');
-        const prog = Math.round((idx / 8) * 100);
-        progressFill.style.width = prog + '%';
-        progressText.textContent = prog + '%';
-        document.querySelector('.nav').classList.remove('show');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        navigateTo(parseInt(link.dataset.project));
     });
 });
 document.getElementById('menuBtn').addEventListener('click', () => document.querySelector('.nav').classList.toggle('show'));

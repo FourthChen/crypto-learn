@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🔐 密码学课程 - 信息安全技术应用专业专用</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link rel="stylesheet" href="styles.css?v=2">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -42,7 +43,8 @@
 
     <main class="main-content">
         <!-- 首页英雄区 -->
-        <section id="home" class="chapter hero-section active">
+        <section id="home" class="chapter active">
+        <div class="hero-section">
             <div class="hero-content">
                 <div class="hero-badge">✨ 信息安全技术应用专业专用</div>
                 <h2 class="hero-title">
@@ -88,6 +90,63 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- 课程项目卡片入口 -->
+        <div class="project-cards-wrap">
+            <h2 class="project-cards-title">📂 课程项目</h2>
+            <p class="project-cards-subtitle">点击下方项目卡片，进入对应项目的学习（含知识点、演示动画、动手实验与习题练习）</p>
+            <div class="project-cards-grid">
+                <a class="project-card" onclick="navigateTo(1)">
+                    <div class="pc-icon">📜</div>
+                    <div class="pc-num">项目1</div>
+                    <div class="pc-name">古典密码应用</div>
+                    <div class="pc-desc">凯撒、栅栏、棋盘、维吉尼亚等古典密码</div>
+                </a>
+                <a class="project-card" onclick="navigateTo(2)">
+                    <div class="pc-icon">🌊</div>
+                    <div class="pc-num">项目2</div>
+                    <div class="pc-name">序列密码应用</div>
+                    <div class="pc-desc">XOR、LFSR、RC4、A5、ZUC密钥流</div>
+                </a>
+                <a class="project-card" onclick="navigateTo(3)">
+                    <div class="pc-icon">📦</div>
+                    <div class="pc-num">项目3</div>
+                    <div class="pc-name">分组密码应用</div>
+                    <div class="pc-desc">DES、AES、SM4与五种工作模式</div>
+                </a>
+                <a class="project-card" onclick="navigateTo(4)">
+                    <div class="pc-icon">🗝️</div>
+                    <div class="pc-num">项目4</div>
+                    <div class="pc-name">公钥密码应用</div>
+                    <div class="pc-desc">RSA、ECC、SM2、SM9公钥算法</div>
+                </a>
+                <a class="project-card" onclick="navigateTo(5)">
+                    <div class="pc-icon">🔨</div>
+                    <div class="pc-num">项目5</div>
+                    <div class="pc-name">哈希函数应用</div>
+                    <div class="pc-desc">MD5、SHA系列、SM3哈希算法</div>
+                </a>
+                <a class="project-card" onclick="navigateTo(6)">
+                    <div class="pc-icon">🛡️</div>
+                    <div class="pc-num">项目6</div>
+                    <div class="pc-name">消息认证码应用</div>
+                    <div class="pc-desc">MAC、HMAC、重放攻击防御</div>
+                </a>
+                <a class="project-card" onclick="navigateTo(7)">
+                    <div class="pc-icon">✍️</div>
+                    <div class="pc-num">项目7</div>
+                    <div class="pc-name">数字签名与证书</div>
+                    <div class="pc-desc">数字签名、X.509证书、CA认证</div>
+                </a>
+                <a class="project-card" onclick="navigateTo(8)">
+                    <div class="pc-icon">🏗️</div>
+                    <div class="pc-num">项目8</div>
+                    <div class="pc-name">密码应用场景设计</div>
+                    <div class="pc-desc">SSL/TLS、多因素认证、密钥管理</div>
+                </a>
+            </div>
+        </div>
         </section>
 
         <!-- 8个项目容器，内容由 JavaScript 动态渲染 -->
@@ -106,7 +165,7 @@
         <p>🔐 密码学课程 - 用动画让学习更简单 | 信息安全技术应用专业专用 | 版权归陈思昊所有</p>
     </footer>
 
-    <script src="content.js"></script>
-    <script src="app.js"></script>
+    <script src="content.js?v=2"></script>
+    <script src="app.js?v=2"></script>
 </body>
 </html>

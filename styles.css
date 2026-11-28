@@ -172,6 +172,35 @@ body {
 .q-feedback.bad { background: rgba(241,7,163,0.1); border: 1px solid rgba(241,7,163,0.4); color: #f3c8dc; }
 .q-answer-line { font-weight: bold; color: #00d4ff; }
 
+/* ==================== 首页项目卡片 ==================== */
+.project-cards-wrap { margin-top: 40px; padding: 20px 0 10px; }
+.project-cards-title { font-size: 26px; text-align: center; margin-bottom: 8px; color: #fff; }
+.project-cards-subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 28px; }
+.project-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.project-card {
+    display: block; padding: 26px 22px; text-decoration: none; color: #e0e0e0;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px; transition: all 0.3s; cursor: pointer; position: relative; overflow: hidden;
+}
+.project-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, #00d4ff, #7b2ff7, #f107a3);
+    opacity: 0; transition: opacity 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-6px); border-color: rgba(123,47,247,0.5);
+    background: rgba(123,47,247,0.08); box-shadow: 0 12px 30px rgba(123,47,247,0.25);
+}
+.project-card:hover::before { opacity: 1; }
+.pc-icon { font-size: 40px; margin-bottom: 14px; }
+.pc-num {
+    display: inline-block; padding: 3px 12px; background: rgba(123,47,247,0.25);
+    border: 1px solid rgba(123,47,247,0.5); border-radius: 12px; font-size: 12px;
+    color: #b9a5f5; margin-bottom: 10px;
+}
+.pc-name { font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 8px; }
+.pc-desc { font-size: 13px; color: #999; line-height: 1.6; }
+
 /* ==================== 底部 ==================== */
 .footer { text-align: center; padding: 28px; color: #666; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px; font-size: 13px; }
 
